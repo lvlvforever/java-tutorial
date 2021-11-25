@@ -1,3 +1,5 @@
+package site.daipeng.java.tutorial;
+
 /**
  * @author daipeng01
  * @desc 用于java基础知识的学习
