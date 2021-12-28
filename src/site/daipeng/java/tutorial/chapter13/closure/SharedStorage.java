@@ -1,0 +1,20 @@
+package site.daipeng.java.tutorial.chapter13.closure;
+
+import java.util.function.IntSupplier;
+
+/**
+ * @author daipeng01
+ * @desc
+ * @date 2021/12/18 4:52 下午
+ **/
+public class SharedStorage {
+    public static void main(String[] args) {
+        Closure1 c1 = new Closure1();
+        IntSupplier f1 = c1.makeFun(0);
+        IntSupplier f2 = c1.makeFun(0);
+        IntSupplier f3 = c1.makeFun(0);
+        System.out.println(f1.getAsInt());
+        System.out.println(f2.getAsInt());
+        System.out.println(f3.getAsInt());
+    }
+}
