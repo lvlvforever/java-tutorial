@@ -8,43 +8,36 @@ package site.daipeng.java.tutorial.chapter8;
 
 public class Shape {
 
-    public String shapeName;
-    String description;
-    protected String name;
-    private String content;
-
-    public Shape(String name) {
-        this.name = name;
-    }
-
     public void sayName() {
         System.err.println("i am shape");
     }
 
+    public void dispose() {
+        System.err.println("销毁shape");
+    }
 }
 
 class Circle extends Shape{
 
-    public Circle(String name) {
-        super(name);
-        this.shapeName = "shapeName";
-        this.description = "同一个包内可以继承";
-        this.name = "i am circle";
-//        this.content
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        try{
+            circle.sayName();
+        }catch(Exception e){
+
+        }finally {
+            circle.dispose();
+        }
     }
 
     @Override
-    public void sayName() {
-        System.err.println("i am circle");
+    public void dispose() {
+        super.dispose();
+        System.err.println("销毁circle");
     }
 }
 
 class Rectangle extends Shape{
-
-    public Rectangle(String name) {
-        super(name);
-        this.name = "i am rectangle";
-    }
 
     @Override
     public void sayName() {

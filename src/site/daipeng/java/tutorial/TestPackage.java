@@ -9,6 +9,6 @@ import site.daipeng.java.tutorial.chapter8.Shape;
  **/
 public class TestPackage extends Shape {
     public TestPackage(String name) {
-        super(name);
+
     }
 }

@@ -7,17 +7,19 @@ package site.daipeng.java.tutorial.chapter8;
  **/
 public class Art {
 
-    public Art() {
-        System.err.println("art 构造器");
+    public void sayName() {
+        System.err.println("我是基类-艺术");
     }
 
     public static void main(String[] args) {
-        Drawing drawing = new Drawing(10);
+        Art art = new Drawing();
+        art.sayName();
     }
 }
-
 class Drawing extends Art {
-    public Drawing(int i) {
 
+    @Override
+    public void sayName() {
+        System.err.println("我是派生类-绘画");
     }
 }
