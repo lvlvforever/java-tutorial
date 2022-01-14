@@ -35,11 +35,7 @@ public class EnumTest {
 
         EnumMap<Color, Command> commandMap = new EnumMap<>(Color.class);
         commandMap.put(Color.RED, () -> System.err.println("我是红色"));
-        commandMap.put(Color.GREEN,() -> System.err.println("我是绿色"));
-
-
-
-
+        commandMap.put(Color.GREEN, () -> System.err.println("我是绿色"));
 
         for (Color color : Color.values()) {
             System.err.println("name: "+color.name());
